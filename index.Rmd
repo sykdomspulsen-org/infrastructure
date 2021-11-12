@@ -1,0 +1,26 @@
+---
+title: "Sykdomspulsen's Infrastructure"
+site: bookdown::bookdown_site
+documentclass: book
+output:
+  bookdown::gitbook:
+    config:
+      edit: https://github.com/sykdomspulsen-org/infrastructure/edit/main/%s
+      download: ["pdf"]
+  bookdown::pdf_book: default
+github-repo: sykdomspulsen-org/infrastructure
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+options(knitr.kable.NA = '')
+library(data.table)
+library(magrittr)
+if(!requireNamespace("sykdomspulsen")){
+  devtools::load_all(".")
+} else {
+  library(sykdomspulsen)
+}
+```
+
+# Overview
